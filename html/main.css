@@ -1,0 +1,14 @@
+html {
+background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0lVqTD-uhWVc1jiSdzxrSq0ZOV6pO7RDJfw&usqp=CAU);
+}
+header {
+    text-align: center;
+    color: white;
+    border: solid white 2px;
+    background: orange;
+    
+    text-align: bold;
+}
+h3 {
+    color: white;
+}
