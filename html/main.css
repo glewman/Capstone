@@ -1,5 +1,6 @@
 html {
-background: url(https://trello-attachments.s3.amazonaws.com/602cb70f7f46a92fe75b80e9/259x194/4491ab2c9bf56142ca281733e69dd698/capstone_clownfish_1.jpg);
+background: url(https://live.staticflickr.com/7193/13705311063_57ff505d94_b.jpg);
+background-size: cover;
 }
 header {
     text-align: center;
@@ -10,7 +11,7 @@ header {
 }
 h3 {
     color: white;
-    margin: 100px 250px 100px 250px;
+    margin: 100px 450px 100px 450px;
     padding: 25px 50px;
     border: solid white;
     background: orange;
@@ -34,7 +35,14 @@ footer {
 div.topnav {
     margin: 25px;
 }
-.topnav a.active {
-    background-color: blue;
-    color: white;
+[data-component="slideshow"] .slide {
+    display: none;
+  }
+
+  [data-component="slideshow"] .slide.active {
+    display: block;
+  }
+  img{
+      width: 700px;
+      height: 300px;
   }
