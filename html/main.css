@@ -35,13 +35,7 @@ footer {
 div.topnav {
     margin: 25px;
 }
-[data-component="slideshow"] .slide {
-    display: none;
-  }
 
-  [data-component="slideshow"] .slide.active {
-    display: block;
-  }
   img{
       width: 700px;
       height: 300px;
