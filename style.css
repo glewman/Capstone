@@ -1,0 +1,73 @@
+html {
+  background: url(https://live.staticflickr.com/7193/13705311063_57ff505d94_b.jpg);
+  background-size: cover;
+  }
+  header {
+      text-align: center;
+      color: white;
+      border: solid white 2px;
+      background: orange;
+  }
+  h3 {
+      color: white;
+      margin: 100px 450px 100px 450px;
+      padding: 25px 50px;
+      border: solid white;
+      background: orange;
+      text-align: center;
+  }
+  h4 {
+    color: white;
+    text-align: center;
+    margin: 20px;
+    padding: 15px;
+    border: solid white;
+    background: orange;
+}
+
+  footer {
+      color: white;
+      text-align: center;
+  }
+  /* .topnav {
+      color: white;
+
+      text-align: center;
+  }
+  .topnav a {
+      background: orangered;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+  }
+  div.topnav {
+      margin: 25px;
+  } */
+
+  img{
+  width: 700px;
+  height: 300px;
+  }
+  .logs {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+  }
+
+  #Fish {
+      margin: 20px 0px;
+  }
+  #Equipment {
+      margin: 20px 0px;
+  }
+  #Purchases {
+      margin: 20px 0px;
+  }
+  #Changes {
+      margin: 0px 0px;
+  }
+  @media (max-width: 450px) {
+  .logs{
+  height: 10%;
+  width: 10%;
+  }

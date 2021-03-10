@@ -7,7 +7,6 @@ header {
     color: white;
     border: solid white 2px;
     background: orange;
-        text-align: bold;
 }
 h3 {
     color: white;
@@ -21,9 +20,9 @@ footer {
     color: white;
     text-align: center;
 }
-.topnav {
+/* .topnav {
     color: white;
-    
+
     text-align: center;
 }
 .topnav a {
@@ -34,9 +33,35 @@ footer {
 }
 div.topnav {
     margin: 25px;
-}
+} */
 
-  img{
-      width: 700px;
-      height: 300px;
-  }
+img{
+width: 700px;
+height: 300px;
+}
+.logs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+h4 {
+    color: white;
+    text-align: center;
+}
+#Fish {
+    margin: 20px 0px;
+}
+#Equipment {
+    margin: 20px 0px;
+}
+#Purchases {
+    margin: 20px 0px;
+}
+#Changes {
+    margin: 0px 0px;
+}
+@media (max-width: 450px) {
+.logs{
+height: 10%;
+width: 10%;
+}
