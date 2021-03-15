@@ -1,22 +1,27 @@
 html {
-  background: url(https://live.staticflickr.com/7193/13705311063_57ff505d94_b.jpg);
-  background-size: cover;
-  }
-  header {
-      text-align: center;
-      color: white;
-      border: solid white 2px;
-      background: orange;
-  }
-  h3 {
-      color: white;
-      margin: 100px 450px 100px 450px;
-      padding: 25px 50px;
-      border: solid white;
-      background: orange;
-      text-align: center;
-  }
-  h4 {
+    background: url(https://live.staticflickr.com/7193/13705311063_57ff505d94_b.jpg);
+    background-size: cover;
+}
+header {
+    text-align: center;
+    color: white;
+    border: solid white 2px;
+    background: orange;
+}
+footer {
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    color: white;
+    margin: 100px 450px 100px 450px;
+    padding: 25px 50px;
+    border: solid white;
+    background: orange;
+    text-align: center;
+}
+h4 {
     color: white;
     text-align: center;
     margin: 20px;
@@ -24,50 +29,91 @@ html {
     border: solid white;
     background: orange;
 }
+#homeIntro {
+    color: white;
+    text-align: center;
+    border: solid white;
+    font-size: 20px;
+    background-color: orange;
+    margin: 0px 100px;
+}
 
-  footer {
-      color: white;
-      text-align: center;
-  }
-  /* .topnav {
-      color: white;
+/* .navBar {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+}
+.navBar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navBar li {
+    float: left;
+}
+.navBar {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+} */
+.toDo {
+    display: flex;
+justify-content: center;
+margin: 20;
+}
+.shoppingList {
+    display: flex;
+    justify-content: center;
+    margin: 20;
+}
+img{
+    width: 700px;
+    height: 300px;
+}
+.logs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
 
-      text-align: center;
-  }
-  .topnav a {
-      background: orangered;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-  }
-  div.topnav {
-      margin: 25px;
-  } */
+#Fish {
+    margin: 20px 0px;
+}
+#Equipment {
+    margin: 20px 0px;
+}
+#Purchases {
+    margin: 20px 0px;
+}
+#Changes {
+    margin: 0px 0px;
+}
+/* @media (max-width: 450px) {
+    .logs{
+    height: 10%;
+    width: 10%;
+} */
+ul{
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+    display: inline;
+}
 
-  img{
-  width: 700px;
-  height: 300px;
-  }
-  .logs {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-  }
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
-  #Fish {
-      margin: 20px 0px;
-  }
-  #Equipment {
-      margin: 20px 0px;
-  }
-  #Purchases {
-      margin: 20px 0px;
-  }
-  #Changes {
-      margin: 0px 0px;
-  }
-  @media (max-width: 450px) {
-  .logs{
-  height: 10%;
-  width: 10%;
-  }
+li a:hover{
+    background-color: orange;
+    color:white;
+}
