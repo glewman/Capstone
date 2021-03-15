@@ -98,22 +98,44 @@ ul{
     margin:0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
 }
 li {
     float: left;
     display: inline;
+    padding: 0px 60px;
 }
 
 li a {
     display: block;
-    color: white;
+    color:white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+
 }
 
 li a:hover{
     background-color: orange;
     color:white;
 }
+
+#logIn {
+    position: relative;
+    background-color: orange;
+    margin: 16% 28%;
+    padding: 50px;
+    border: solid white;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+
+#loginText {
+    font-size: 40px;
+    color: whitesmoke;
+    margin: 5px 20px 30px 20px;
+}
+
+
