@@ -15,19 +15,22 @@ footer {
 
 h3 {
     color: white;
-    margin: 100px 450px 100px 450px;
+    /* margin: 100px 450px 100px 450px; */
+    margin: 2% 30%;
     padding: 25px 50px;
     border: solid white;
     background: orange;
     text-align: center;
 }
-h4 {
+#logsText {
+    font-size: 110%;
     color: white;
     text-align: center;
     margin: 20px;
-    padding: 15px;
+    padding: 2%;
     border: solid white;
     background: orange;
+    font-weight: bold;
 }
 #homeIntro {
     color: white;
@@ -35,58 +38,47 @@ h4 {
     border: solid white;
     font-size: 20px;
     background-color: orange;
-    margin: 0px 100px;
+    margin: 0px 5%;
+    padding: 3%;
 }
 
-/* .navBar {
-    display: block;
-    height: 25px;
-    line-height: 25px;
-}
-.navBar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.navBar li {
-    float: left;
-}
-.navBar {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 16px;
-} */
 .toDo {
     display: flex;
 justify-content: center;
-margin: 20;
+margin: 1% 20%;
 }
 .shoppingList {
     display: flex;
     justify-content: center;
-    margin: 20;
+    margin: 1%;
 }
-img{
+/* img{
     width: 700px;
     height: 300px;
-}
+} */
 .logs {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
 
-#Fish {
+/* #Fish {
     margin: 20px 0px;
+} */
+#Fish {
+    margin: 10% 0%;
 }
 #Equipment {
-    margin: 20px 0px;
+    margin: 10% 0%;
 }
 #Purchases {
-    margin: 20px 0px;
+    margin: 10% 0%;
 }
 #Changes {
-    margin: 0px 0px;
+    margin:10% 0%;    ;
+}
+#Plants {
+margin: 10% 0%;
 }
 /* @media (max-width: 450px) {
     .logs{

@@ -1,10 +1,10 @@
 import html from "html-literal";
 
-export default () => html` <h4>
+export default () => html` <p id="logsText">
     On this page you can log everything from the fish you have in your tank to
     that time you changed the flow direction. Make sure to log the date and any
     other specific information.
-  </h4>
+  </p>
   <div class="logs">
     <textarea
       name="Fish"
@@ -22,7 +22,7 @@ export default () => html` <h4>
     ></textarea>
     <textarea
       name="Plants/Coral"
-      id="Plants/Corals"
+      id="Plants"
       cols="50"
       rows="20"
       placeholder="Plants/Coral"
