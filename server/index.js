@@ -59,7 +59,7 @@ app.get("/toDos/:id", (request, response) => {
   });
 });
 
-app.put("/toDoss/:id", (request, response) => {
+app.put("/toDos/:id", (request, response) => {
   const body = request.body;
   toDo.findByIdAndUpdate(
     request.params.id,
@@ -77,60 +77,63 @@ app.put("/toDoss/:id", (request, response) => {
     }
   );
 });
+//Shopping list -------
+const shoppingListSchema = new mongoose.Schema({
+  date: String,
+  item: String,
+  priority: String,
+  store: String,
+});
 
-// const pizzaSchema = new mongoose.Schema({
-//   crust: String,
-//   cheese: String,
-//   sauce: String,
-//   toppings: [String]
-// });
+const shoppingList = mongoose.model("shoppingList", shoppingListSchema);
 
-// const Pizza = mongoose.model("Pizza", pizzaSchema);
+app.post("/shoppingLists", (request, response) => {
+  const newshoppingList = new shoppingList(request.body);
+  newshoppingList.save((err, data) => {
+    return err ? response.sendStatus(500).json(err) : response.json(data);
+  });
+});
 
-// app.post("/pizzas", (request, response) => {
-//   const newPizza = new Pizza(request.body);
-//   newPizza.save((err, pizza) => {
-//     return err ? response.sendStatus(500).json(err) : response.json(pizza);
-//   });
-// });
+app.get("/shoppingLists", (request, response) => {
+  shoppingList.find({}, (error, data) => {
+    if (error) return response.sendStatus(500).json(error);
+    return response.json(data);
+  });
+});
 
-// app.get("/pizzas", (request, response) => {
-//   Pizza.find({}, (error, data) => {
-//     if (error) return response.sendStatus(500).json(error);
-//     return response.json(data);
-//   });
-// });
-// app.delete('/pizzas/:id', (request, response) => {
-//   Pizza.findByIdAndRemove(request.params.id, {}, (error, data) => {
-//     if (error) return response.sendStatus(500).json(error);
-//     return response.json(data);
-//   });
-// });
-// app.get("/pizzas/:id", (request, response) => {
-//   Pizza.findById(request.params.id, (error, data) => {
-//     if (error) return response.sendStatus(500).json(error);
-//     return response.json(data);
-//   });
-// });
+app.delete("/shoppingLists/:id", (request, response) => {
+  toDo.findByIdAndRemove(request.params.id, {}, (error, data) => {
+    if (error) return response.sendStatus(500).json(error);
+    return response.json(null);
+  });
+});
 
-// app.put("/pizzas/:id", (request, response) => {
-//   const body = request.body;
-//   Pizza.findByIdAndUpdate(
-//     request.params.id,
-//     {
-//       $set: {
-//         crust: body.crust,
-//         cheese: body.cheese,
-//         sauce: body.sauce,
-//         toppings: body.toppings
-//       }
-//     },
-//     (error, data) => {
-//       if (error) return response.sendStatus(500).json(error);
-//       return response.json(request.body);
-//     }
-//   );
-// });
+app.get("/shoppingLists/:id", (request, response) => {
+  toDo.findById(request.params.id, (error, data) => {
+    if (error) return response.sendStatus(500).json(error);
+    return response.json(data);
+  });
+});
+
+app.put("/shoppingLists/:id", (request, response) => {
+  const body = request.body;
+  toDo.findByIdAndUpdate(
+    request.params.id,
+    {
+      $set: {
+        date: body.date,
+        item: body.item,
+        priority: body.priority,
+        store: body.store,
+      },
+    },
+    (error, data) => {
+      if (error) return response.sendStatus(500).json(error);
+      return response.json(request.body);
+    }
+  );
+});
+//Shopping list ^^^^^^
 
 app.route("/").get((request, response) => {
   response.send("HELLO WORLD");

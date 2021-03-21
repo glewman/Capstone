@@ -22,6 +22,13 @@ h3 {
     background: orange;
     text-align: center;
 }
+#logsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+
+}
+
 #logsText {
     font-size: 110%;
     color: white;
@@ -44,8 +51,8 @@ h3 {
 
 .toDo {
     display: flex;
-justify-content: center;
-margin: 1% 20%;
+    justify-content: center;
+    margin: 1% 20%;
 }
 .shoppingList {
     display: flex;
@@ -66,19 +73,23 @@ margin: 1% 20%;
     margin: 20px 0px;
 } */
 #Fish {
-    margin: 10% 0%;
+margin: 10% 0%;
 }
 #Equipment {
     margin: 10% 0%;
 }
 #Purchases {
     margin: 10% 0%;
+    display: flex;
+    align-content: center;
+    align-items: flex-end;
+
 }
 #Changes {
     margin:10% 0%;    ;
 }
 #Plants {
-margin: 10% 0%;
+    margin: 10% 0%;
 }
 /* @media (max-width: 450px) {
     .logs{
@@ -105,7 +116,6 @@ li a {
     text-decoration: none;
     font-size: 20px;
     font-weight: bolder;
-
 }
 
 li a:hover{
