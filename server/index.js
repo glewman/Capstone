@@ -135,6 +135,122 @@ app.put("/shoppingLists/:id", (request, response) => {
 });
 //Shopping list ^^^^^^
 
+//Fish Log-------
+const fishSchema = new mongoose.Schema({
+  date: String,
+  type: String,
+  diet: String,
+  aggression: Boolean,
+});
+
+const fish = mongoose.model("fish", fishSchema);
+
+app.post("/fishs", (request, response) => {
+  const newFish = new fish(request.body);
+  newFish.save((err, data) => {
+    return err ? response.sendStatus(500).json(err) : response.json(data);
+  });
+});
+
+app.get("/fishs", (request, response) => {
+  fish.find({}, (error, data) => {
+    if (error) return response.sendStatus(500).json(error);
+    return response.json(data);
+  });
+});
+
+app.delete("/fishs/:id", (request, response) => {
+  fish.findByIdAndRemove(request.params.id, {}, (error, data) => {
+    if (error) return response.sendStatus(500).json(error);
+    return response.json(null);
+  });
+});
+
+app.get("/fishs/:id", (request, response) => {
+  fish.findById(request.params.id, (error, data) => {
+    if (error) return response.sendStatus(500).json(error);
+    return response.json(data);
+  });
+});
+
+app.put("/fishs/:id", (request, response) => {
+  const body = request.body;
+  fish.findByIdAndUpdate(
+    request.params.id,
+    {
+      $set: {
+        date: body.date,
+        type: body.type,
+        diet: body.diet,
+        aggression: body.aggression,
+      },
+    },
+    (error, data) => {
+      if (error) return response.sendStatus(500).json(error);
+      return response.json(request.body);
+    }
+  );
+});
+//Fish Log^^^^^^^
+
+//Equipment----
+const equipmentSchema = new mongoose.Schema({
+  date: String,
+  type: String,
+  price: String,
+  store: String,
+});
+
+const equipment = mongoose.model("Equipment", equipmentSchema);
+
+app.post("/equipments", (request, response) => {
+  const newEquipment = new equipment(request.body);
+  newEquipment.save((err, data) => {
+    return err ? response.sendStatus(500).json(err) : response.json(data);
+  });
+});
+
+app.get("/equipments", (request, response) => {
+  equipment.find({}, (error, data) => {
+    if (error) return response.sendStatus(500).json(error);
+    return response.json(data);
+  });
+});
+
+app.delete("/equipments/:id", (request, response) => {
+  equipment.findByIdAndRemove(request.params.id, {}, (error, data) => {
+    if (error) return response.sendStatus(500).json(error);
+    return response.json(null);
+  });
+});
+
+app.get("/equipments/:id", (request, response) => {
+  equipment.findById(request.params.id, (error, data) => {
+    if (error) return response.sendStatus(500).json(error);
+    return response.json(data);
+  });
+});
+
+app.put("/equipments/:id", (request, response) => {
+  const body = request.body;
+  equipment.findByIdAndUpdate(
+    request.params.id,
+    {
+      $set: {
+        date: body.date,
+        type: body.type,
+        price: body.price,
+        store: body.store,
+      },
+    },
+    (error, data) => {
+      if (error) return response.sendStatus(500).json(error);
+      return response.json(request.body);
+    }
+  );
+});
+//Equipment^^^^^^
+
 app.route("/").get((request, response) => {
   response.send("HELLO WORLD");
 });
