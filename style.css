@@ -1,3 +1,7 @@
+*{
+    margin:0;
+    padding: 0;
+}
 html {
     background: url(https://live.staticflickr.com/7193/13705311063_57ff505d94_b.jpg);
     background-size: cover;
@@ -15,7 +19,6 @@ footer {
 
 h3 {
     color: white;
-    /* margin: 100px 450px 100px 450px; */
     margin: 2% 30%;
     padding: 25px 50px;
     border: inset .5rem white;
@@ -90,6 +93,16 @@ margin: 10% 0% 5% 9%;
     height: 10%;
     width: 10%;
 } */
+#UploadPicture {
+    position: relative;
+    background-color: orange;
+    margin: 16% 28%;
+    padding: 50px;
+    border: outset .5rem white;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
 ul{
     list-style-type: none;
     margin:0;
