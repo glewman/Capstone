@@ -156,5 +156,9 @@ li a:hover{
 #email {
     margin: 0% 0% 0% 7.75%;
 }
-
+#gallery img {
+    max-width: 30%;
+    height: auto;
+    margin: 1%;
+}
 
