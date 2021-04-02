@@ -12,3 +12,41 @@ router
   });
 //Router Object
 module.exports = router;
+
+// route.route("/")...
+
+router
+  .route("/:id") // equivalent to /users/:id
+  .get((request, response) => {
+    // use params Object to get the ID
+    const id = request.params.id;
+    const user = db.get("users").getById(id).value();
+
+    if (user) {
+      response.json(user);
+    } else {
+      response.status(404).json({ message: "Not Found" });
+    }
+  })
+  .patch((request, response) => {
+    const id = request.params.id;
+    const user = db.get("users").updateById(id, request.body).write();
+
+    if (user) {
+      response.json(user);
+    } else {
+      response.status(404).json({ message: "Not Found" });
+    }
+  })
+  .delete((request, response) => {
+    const id = request.params.id;
+    const user = db.get("users").removeById(id).write();
+
+    if (user) {
+      response.json(user);
+    } else {
+      response.status(404).json({ message: "Not Found" });
+    }
+  });
+
+// router export statement

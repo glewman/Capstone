@@ -7,7 +7,7 @@ export default () =>
     <div class="toDo">
     <textarea
       name="toDo"
-      id="Fish"
+      id="toDo"
       cols="50"
       rows="20"
       placeholder="To Do"
@@ -16,7 +16,7 @@ export default () =>
     <div class="shoppingList">
     <textarea
       name="shoppingList"
-      id="Fish"
+      id="shoppingList"
       cols="50"
       rows="20"
       placeholder="Shopping List"

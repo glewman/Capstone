@@ -1,7 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-
+const users = require("./routers/users");
+const shoppingList = require("./routers/shoppingList");
 const app = express();
 
 // Middleware
@@ -10,11 +11,29 @@ const logging = (request, response, next) => {
   next();
 };
 
+// CORS Middleware
+const cors = (req, res, next) => {
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-Requested-With,content-type, Accept,Authorization,Origin"
+  );
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+  );
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  next();
+};
+
 app.use(bodyParser.json());
 app.use(logging);
+app.use(cors);
+app.use("/users", users);
+app.use("/shoppingList", shoppingList);
 
 // Database stuff
-mongoose.connect("mongodb://localhost/pizza");
+mongoose.connect("mongodb://localhost/Tankmate");
 const db = mongoose.connection;
 
 let db_status = "MongoDB connection not successful.";
@@ -77,69 +96,13 @@ app.put("/toDos/:id", (request, response) => {
     }
   );
 });
-//Shopping list -------
-const shoppingListSchema = new mongoose.Schema({
-  date: String,
-  item: String,
-  priority: String,
-  store: String,
-});
-
-const shoppingList = mongoose.model("shoppingList", shoppingListSchema);
-
-app.post("/shoppingLists", (request, response) => {
-  const newshoppingList = new shoppingList(request.body);
-  newshoppingList.save((err, data) => {
-    return err ? response.sendStatus(500).json(err) : response.json(data);
-  });
-});
-
-app.get("/shoppingLists", (request, response) => {
-  shoppingList.find({}, (error, data) => {
-    if (error) return response.sendStatus(500).json(error);
-    return response.json(data);
-  });
-});
-
-app.delete("/shoppingLists/:id", (request, response) => {
-  toDo.findByIdAndRemove(request.params.id, {}, (error, data) => {
-    if (error) return response.sendStatus(500).json(error);
-    return response.json(null);
-  });
-});
-
-app.get("/shoppingLists/:id", (request, response) => {
-  toDo.findById(request.params.id, (error, data) => {
-    if (error) return response.sendStatus(500).json(error);
-    return response.json(data);
-  });
-});
-
-app.put("/shoppingLists/:id", (request, response) => {
-  const body = request.body;
-  toDo.findByIdAndUpdate(
-    request.params.id,
-    {
-      $set: {
-        date: body.date,
-        item: body.item,
-        priority: body.priority,
-        store: body.store,
-      },
-    },
-    (error, data) => {
-      if (error) return response.sendStatus(500).json(error);
-      return response.json(request.body);
-    }
-  );
-});
-//Shopping list ^^^^^^
 
 //Fish Log-------
 const fishSchema = new mongoose.Schema({
   date: String,
   type: String,
   diet: String,
+  store: String,
   aggression: Boolean,
 });
 
@@ -182,6 +145,7 @@ app.put("/fishs/:id", (request, response) => {
         date: body.date,
         type: body.type,
         diet: body.diet,
+        store: body.store,
         aggression: body.aggression,
       },
     },

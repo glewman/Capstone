@@ -8,22 +8,22 @@ export default (st) => html`
     )}
   </section>
   <form id="UploadPicture" method="POST" action="">
-    <h2>Add a photo to the gallery!</h2>
+    <p id="uploadText">Add a photo!</p>
     <div>
       <label for="url">Photo URL:</label>
       <input
         type="text"
-        name="url"
+        name="name"
         id="url"
         placeholder="Enter Photo URL"
         required
       />
     </div>
     <div>
-      <label for="title">Photo Title/Description:</label>
+      <label for="title">Photo Title:</label>
       <input
         type="text"
-        name="title"
+        name="name"
         id="title"
         placeholder="Enter Photo Description"
         required
