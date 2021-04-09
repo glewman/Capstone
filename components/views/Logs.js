@@ -8,7 +8,7 @@ export default (st) => html` <p id="logsText">
   <div class="logs">
     <div>
       <textarea name="Fish" id="Fish" cols="50" rows="20" placeholder="Fish">
-${st.Fish.item}
+      ${st.Fish.item}
     </textarea>
       <button id="saveFish">Update Fish</button>
     </div>
@@ -54,7 +54,7 @@ ${st.Fish.item}
         rows="15"
         placeholder="Purchases"
       >
-${st.Purchases.item}
+      ${st.Purchases.item}
     </textarea>
       <button id="savePurchases">Update Purchases</button>
     </div>

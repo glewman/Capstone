@@ -7,6 +7,7 @@ export default (st) =>
       Aquarium.
     </div>
     <div class="toDo">
+      <div id="toDoList"><p>To Do List</p></div>
       <textarea name="toDo" id="toDo" cols="50" rows="20" placeholder="To Do">
         ${st.toDo.item}
       </textarea
@@ -14,6 +15,7 @@ export default (st) =>
       <button id="saveTodo">Update To Do</button>
     </div>
     <div class="shoppingList">
+      <div id="shoppingListText"><p>Shopping List</p></div>
       <textarea
         name="shoppingList"
         id="shoppingList"
