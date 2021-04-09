@@ -2,6 +2,11 @@
     margin:0;
     padding: 0;
 }
+
+#Hidden {
+display: none;
+}
+
 html {
     background: url(https://live.staticflickr.com/7193/13705311063_57ff505d94_b.jpg);
     background-size: cover;
@@ -47,22 +52,66 @@ justify-content: space-evenly;
     border: inset .5rem white;
     font-size: 20px;
     background-color: orange;
-    margin: 0px 5%;
+    margin: 2% 5%;
     padding: 3%;
 }
 
 .toDo {
     display: flex;
     justify-content: center;
-    margin: 1% 20%;
+    flex-flow: column;
+    margin: 10% 20% 2% 20%;
+}
+
+#toDo{
+    box-shadow: black 3px 3px 3px 3px;
+    resize: none;
+}
+#saveTodo {
+    box-shadow:inset 0px 1px 0px 0px;
+	background-color: orange;
+	border-radius:6px;
+	border:1px solid white;
+	display:flex;
+    align-self: baseline;
+    justify-content: center;
+	cursor:pointer;
+	color:white;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 10px;
+	text-decoration:none;
+    margin: 5% 10% 20% 2%;
 }
 
 .shoppingList {
     display: flex;
     justify-content: center;
+    flex-flow: column;
     margin: 1% 20%;
+    resize: none;
 }
-
+#shoppingList {
+    resize: none;
+    box-shadow: black 3px 3px 3px 3px;
+}
+#saveList{
+    box-shadow:inset 0px 1px 0px 0px;
+	background-color: orange;
+	border-radius:6px;
+	border:1px solid white;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+    margin: 5% 70% 20% 2%;
+}
 .logs {
     display: flex;
     flex-flow: row wrap;
@@ -71,22 +120,113 @@ justify-content: space-evenly;
 
 #Fish {
 margin: 10% 0% 5% 9%;
+flex-flow: column;
 }
+
+#saveFish {
+    box-shadow:inset 0px 1px 0px 0px;
+	background-color: orange;
+	border-radius:6px;
+	border:1px solid white;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+    margin: 1% 1% 1% 10%;
+}
+
 #Equipment {
-    margin: 10% 10% 5% 10%;
+    margin: 10% 70% 5% 10%;
 }
+
+#saveEquipment {
+    box-shadow:inset 0px 1px 0px 0px;
+	background-color: orange;
+	border-radius:6px;
+	border:1px solid white;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+    margin: 1% 1% 1% 11%;
+
+
+}
+
 #Purchases {
     margin: 10% 0%;
     display: flex;
     align-content: center;
     align-items: flex-end;
+}
+
+#savePurchases {
+    box-shadow:inset 0px 1px 0px 0px;
+	background-color: orange;
+	border-radius:6px;
+	border:1px solid white;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 10px;
+	text-decoration:none;
+    margin: 1%;
+}
+
+#Changes {
+    margin:5% 9% 5% 5%;
+}
+
+#saveChanges {
+    box-shadow:inset 0px 1px 0px 0px;
+	background-color: orange;
+	border-radius:6px;
+	border:1px solid white;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+    margin: 1% 1% 1% 7%;
 
 }
-#Changes {
-    margin:5% 9% 5% 0%;
-}
+
 #Plants {
     margin: 5% 10% 5% 9%;
+}
+
+#saveCoral {
+    box-shadow:inset 0px 1px 0px 0px;
+	background-color: orange;
+	border-radius:6px;
+	border:1px solid white;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+    margin: 1% 1% 1% 10%;
 }
 /* @media (max-width: 450px) {
     .logs{
@@ -124,12 +264,16 @@ li a {
     text-decoration: none;
     font-size: 20px;
     font-weight: bolder;
+    margin: 30% 0% 0% 0%;
 }
+
 
 li a:hover{
     background-color: orange;
     color:white;
     border: outset .2rem white;
+    border-radius:50px;
+    margin: 5% 0% 0% 0%;
 }
 
 #logIn {
@@ -157,7 +301,7 @@ li a:hover{
     border: inset white;
 }
 #username {
-border: inset white;
+    border: inset white;
 }
 #email {
     margin: 0% 0% 0% 7.75%;

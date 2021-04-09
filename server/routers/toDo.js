@@ -10,7 +10,7 @@ router.post("/", (request, response) => {
 });
 
 router.get("/", (request, response) => {
-  toDo.find({}, (error, data) => {
+  toDo.model.find({}, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });

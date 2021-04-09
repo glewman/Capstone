@@ -1,5 +1,10 @@
 const { Router } = require("express");
+const mongoose = require("mongoose");
 const router = Router();
+mongoose.connect("mongodb://localhost/Tankmate");
+const db = mongoose.connection;
+
+let db_status = "MongoDB connection not successful.";
 
 router
   // routes will be specified at the app-level

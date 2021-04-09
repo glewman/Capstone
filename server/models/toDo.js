@@ -5,7 +5,7 @@ const toDoSchema = new mongoose.Schema({
   date: String,
   task: String,
   priority: String,
-  completed: Boolean,
+  completed: String,
 });
 
 const toDo = mongoose.model("toDo", toDoSchema);

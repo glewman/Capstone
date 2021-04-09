@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.post("/", (request, response) => {
   const newshoppingList = new shoppingList.model(request.body);
+  console.log(newshoppingList);
   newshoppingList.save((err, data) => {
     return err ? response.sendStatus(500).json(err) : response.json(data);
   });
