@@ -92,7 +92,7 @@ function addPicOnFormSubmit(st) {
           state.Home.shoppingList = response.data.map(
             (document) => document.item
           );
-          router.navigate("/Home");
+          router.navigate("/");
         })
         .catch((error) => {
           console.log("It puked", error);
@@ -113,7 +113,7 @@ function addPicOnFormSubmit(st) {
         .post(`http://localhost:4040/toDo`, requestData)
         .then((response) => {
           state.Home.toDo = response.data.map((document) => document.item);
-          router.navigate("/Home");
+          router.navigate("/");
         })
         .catch((error) => {
           console.log("It puked", error);

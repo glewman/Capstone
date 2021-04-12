@@ -37,7 +37,7 @@ router.put("/:id", (request, response) => {
     {
       $set: {
         date: body.date,
-        task: body.task,
+        item: body.item,
         priority: body.priority,
         completed: body.completed,
       },
