@@ -1,6 +1,7 @@
 import html from "html-literal";
 
 export default (st) => html`
+  <div id="picturesText"><p>Pictures Page</p></div>
   <section id="gallery">
     ${st.pictures.reduce(
       (html, pic) => html + `<img src="${pic.url}" alt="${pic.title}">`,

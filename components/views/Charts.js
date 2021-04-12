@@ -1,5 +1,7 @@
 import html from "html-literal";
 
-export default () => html` <p>
-  put charts here
-</p>`;
+export default () => html` <div id="chartsText">
+  <p>
+    COMING SOON!!!
+  </p>
+</div>`;

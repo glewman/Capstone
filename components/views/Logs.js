@@ -7,12 +7,14 @@ export default (st) => html` <p id="logsText">
   </p>
   <div class="logs">
     <div>
+      <div id="fishHeader"><p>Fish Log</p></div>
       <textarea name="Fish" id="Fish" cols="50" rows="20" placeholder="Fish">
-      ${st.Fish.item}
+      ${st.fish.item}
     </textarea>
       <button id="saveFish">Update Fish</button>
     </div>
     <div>
+      <div id="equipmentHeader"><p>Equipment Log</p></div>
       <textarea
         name="Equipment"
         id="Equipment"
@@ -20,11 +22,12 @@ export default (st) => html` <p id="logsText">
         rows="20"
         placeholder="Equipment"
       >
-      ${st.Equipment.item}
+      ${st.equipment.item}
     </textarea>
       <button id="saveEquipment">Update Equipment</button>
     </div>
     <div>
+      <div id="plantsHeader"><p>Plants/Coral</p></div>
       <textarea
         name="Plants/Coral"
         id="Plants"
@@ -35,6 +38,7 @@ export default (st) => html` <p id="logsText">
       <button id="saveCoral">Update Plants/Coral</button>
     </div>
     <div>
+      <div id="changesHeader"><p>Changes Log</p></div>
       <textarea
         name="Changes"
         id="Changes"
@@ -42,11 +46,12 @@ export default (st) => html` <p id="logsText">
         rows="20"
         placeholder="Changes"
       >
-      ${st.Changes.item}
+      ${st.changes.item}
     </textarea>
       <button id="saveChanges">Update Changes</button>
     </div>
     <div>
+      <div id="purchasesHeader"><p>Purchase Log</p></div>
       <textarea
         name="Purchases"
         id="Purchases"
@@ -54,7 +59,7 @@ export default (st) => html` <p id="logsText">
         rows="15"
         placeholder="Purchases"
       >
-      ${st.Purchases.item}
+      ${st.purchases.item}
     </textarea>
       <button id="savePurchases">Update Purchases</button>
     </div>

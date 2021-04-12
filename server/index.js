@@ -3,8 +3,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const users = require("./routers/users");
 const shoppingList = require("./routers/shoppingList");
-const app = express();
 const toDo = require("./routers/toDo");
+const app = express();
 
 // Middleware
 const logging = (request, response, next) => {

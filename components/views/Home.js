@@ -9,7 +9,7 @@ export default (st) =>
     <div class="toDo">
       <div id="toDoList"><p>To Do List</p></div>
       <textarea name="toDo" id="toDo" cols="50" rows="20" placeholder="To Do">
-        ${st.toDo.item}
+      ${st.toDo.item}
       </textarea
       >
       <button id="saveTodo">Update To Do</button>
@@ -24,7 +24,7 @@ export default (st) =>
         placeholder="Shopping List"
       >
         ${st.shoppingList.item}
-        </textarea
+      </textarea
       >
       <button id="saveList" type="button">Update Shopping List</button>
     </div>

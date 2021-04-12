@@ -21,11 +21,13 @@ header {
     font-size: xx-large;
     margin: 5%;
     border-radius: 25%;
+    font-family: Helvetica, sans-serif, serif;
 }
 
 footer {
     color: white;
     text-align: center;
+    font-family: Helvetica, sans-serif, serif;
 }
 
 h3 {
@@ -38,6 +40,7 @@ h3 {
     border-radius: 25%;
     text-shadow: orange 2px 2px;
     font-size: 25px;
+    font-family: Helvetica, sans-serif, serif;
 }
 .logs {
 display: flex;
@@ -46,15 +49,17 @@ justify-content: space-evenly;
 }
 
 #logsText {
-    font-size: 110%;
+    font-size: 25px;
+    text-shadow: orange 2px 2px;
     color: white;
     text-align: center;
     margin: 20px;
     padding: 2%;
-    border: inset .5rem white;
-    background: orange;
+    border: inset .5rem orange;
+    backdrop-filter: invert(1.2);
     font-weight: bold;
     border-radius: 25%;
+    font-family: Helvetica, sans-serif, serif;
 }
 #homeIntro {
     color: white;
@@ -66,6 +71,7 @@ justify-content: space-evenly;
     padding: 3%;
     border-radius: 25%;
     text-shadow: 2px 2px orange;
+    font-family: Helvetica, sans-serif, serif;
 }
 
 #toDoList {
@@ -78,6 +84,7 @@ justify-content: space-evenly;
     border-radius: 25%;
     margin: 2%;
     border: outset .5rem orange;
+    font-family: Helvetica, sans-serif, serif;
 }
 
 .toDo {
@@ -125,6 +132,7 @@ justify-content: space-evenly;
     border-radius: 25%;
     margin: 2%;
     border: outset .5rem orange;
+    font-family: Helvetica, sans-serif, serif;
 }
 
 #shoppingList {
@@ -156,6 +164,21 @@ justify-content: space-evenly;
 #Fish {
 margin: 10% 0% 5% 9%;
 flex-flow: column;
+box-shadow: black 3px 3px 3px 3px;
+resize: none;
+}
+
+#fishHeader {
+    text-shadow: orange 2px 2px;
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    backdrop-filter: invert(1.2);
+    border-radius: 25%;
+    margin: 2%;
+    border: outset .5rem orange;
+    font-family: Helvetica, sans-serif, serif;
 }
 
 #saveFish {
@@ -177,6 +200,21 @@ flex-flow: column;
 
 #Equipment {
     margin: 10% 70% 5% 10%;
+    box-shadow: black 3px 3px 3px 3px;
+    resize: none;
+}
+
+#equipmentHeader {
+    text-shadow: orange 2px 2px;
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    backdrop-filter: invert(1.2);
+    border-radius: 25%;
+    margin: 2%;
+    border: outset .5rem orange;
+    font-family: Helvetica, sans-serif, serif;
 }
 
 #saveEquipment {
@@ -203,6 +241,21 @@ flex-flow: column;
     display: flex;
     align-content: center;
     align-items: flex-end;
+    box-shadow: black 3px 3px 3px 3px;
+    resize: none;
+}
+
+#purchasesHeader {
+    text-shadow: orange 2px 2px;
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    backdrop-filter: invert(1.2);
+    border-radius: 25%;
+    margin: 2%;
+    border: outset .5rem orange;
+    font-family: Helvetica, sans-serif, serif;
 }
 
 #savePurchases {
@@ -223,6 +276,21 @@ flex-flow: column;
 
 #Changes {
     margin:5% 9% 5% 5%;
+    box-shadow: black 3px 3px 3px 3px;
+    resize: none;
+}
+
+#changesHeader {
+    text-shadow: orange 2px 2px;
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    backdrop-filter: invert(1.2);
+    border-radius: 25%;
+    margin: 2%;
+    border: outset .5rem orange;
+    font-family: Helvetica, sans-serif, serif;
 }
 
 #saveChanges {
@@ -245,6 +313,21 @@ flex-flow: column;
 
 #Plants {
     margin: 5% 10% 5% 9%;
+    box-shadow: black 3px 3px 3px 3px;
+    resize: none;
+}
+
+#plantsHeader {
+    text-shadow: orange 2px 2px;
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    backdrop-filter: invert(1.2);
+    border-radius: 25%;
+    margin: 2%;
+    border: outset .5rem orange;
+    font-family: Helvetica, sans-serif, serif;
 }
 
 #saveCoral {
@@ -268,6 +351,34 @@ flex-flow: column;
     height: 10%;
     width: 10%;
 } */
+
+#chartsText {
+    color: white;
+    margin: 2% 30%;
+    padding: 25px 50px;
+    border: inset .5rem orange;
+    backdrop-filter: invert(1.2);
+    text-align: center;
+    border-radius: 25%;
+    text-shadow: orange 2px 2px;
+    font-size: 25px;
+    font-family: Helvetica, sans-serif, serif;
+}
+
+#picturesText {
+    font-size: 25px;
+    text-shadow: orange 2px 2px;
+    color: white;
+    text-align: center;
+    margin: 20px;
+    padding: 2%;
+    border: inset .5rem orange;
+    backdrop-filter: invert(1.2);
+    font-weight: bold;
+    border-radius: 25%;
+    font-family: Helvetica, sans-serif, serif;
+}
+
 #UploadPicture {
     position: relative;
     backdrop-filter: invert(1.2);
@@ -279,6 +390,7 @@ flex-flow: column;
     font-weight: bolder;
     justify-content: space-between;
     border-radius: 25%;
+    font-family: Helvetica, sans-serif, serif;
 }
 ul{
     list-style-type: none;
@@ -296,12 +408,13 @@ li a {
     display: block;
     color:white;
     text-align: center;
-    padding: 5px 7px;
+    padding: 3px 5px;
     text-decoration: none;
     font-size: 25px;
     font-weight: bolder;
     margin: 30% 0% 0% 0%;
     text-shadow: 3px 3px orange;
+    font-family: Helvetica, sans-serif, serif;
 }
 
 
@@ -311,6 +424,20 @@ li a:hover{
     border: outset .2rem orange;
     border-radius:50px;
     margin: 5% 0% 0% 0%;
+}
+
+#aboutHeader {
+    font-size: 25px;
+    text-shadow: orange 2px 2px;
+    color: white;
+    text-align: center;
+    margin: 20px;
+    padding: 2%;
+    border: inset .5rem orange;
+    backdrop-filter: invert(1.2);
+    font-weight: bold;
+    border-radius: 25%;
+    font-family: Helvetica, sans-serif, serif;
 }
 
 #logIn {
@@ -333,6 +460,7 @@ li a:hover{
     justify-content: center;
     background-color: orange;
     border: inset white;
+    font-family: Helvetica, sans-serif, serif;
 }
 
 #password {
