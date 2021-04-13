@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const toDoSchema = new mongoose.Schema({
   date: String,
-  item: String,
+  task: String,
   priority: String,
   completed: String,
 });

@@ -9,7 +9,9 @@ export default (st) =>
     <div class="toDo">
       <div id="toDoList"><p>To Do List</p></div>
       <textarea name="toDo" id="toDo" cols="50" rows="20" placeholder="To Do">
-      </textarea>
+      ${st.toDo.task}
+      </textarea
+      >
       <button id="saveTodo">Update To Do</button>
     </div>
     <div class="shoppingList">

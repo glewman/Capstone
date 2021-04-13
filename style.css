@@ -22,6 +22,7 @@ header {
     margin: 5%;
     border-radius: 25%;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
 }
 
 footer {
@@ -35,13 +36,15 @@ h3 {
     margin: 2% 30%;
     padding: 25px 50px;
     border: inset .5rem orange;
-    backdrop-filter: invert(1.2);
+    backdrop-filter: invert(5.5);
     text-align: center;
     border-radius: 25%;
     text-shadow: orange 2px 2px;
     font-size: 25px;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
 }
+
 .logs {
 display: flex;
 flex-wrap: wrap;
@@ -60,6 +63,7 @@ justify-content: space-evenly;
     font-weight: bold;
     border-radius: 25%;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
 }
 #homeIntro {
     color: white;
@@ -72,6 +76,7 @@ justify-content: space-evenly;
     border-radius: 25%;
     text-shadow: 2px 2px orange;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
 }
 
 #toDoList {
@@ -85,6 +90,7 @@ justify-content: space-evenly;
     margin: 2%;
     border: outset .5rem orange;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
 }
 
 .toDo {
@@ -95,8 +101,11 @@ justify-content: space-evenly;
 }
 
 #toDo{
-    box-shadow: black 3px 3px 3px 3px;
-    resize: none;
+box-shadow: black 3px 3px 3px 3px;
+resize: none;
+font-family: Helvetica, sans-serif, serif;
+font-weight: 800;
+padding: 1% 3%;
 }
 #saveTodo {
     box-shadow:inset 0px 1px 0px 0px;
@@ -122,6 +131,7 @@ justify-content: space-evenly;
     margin: 1% 20%;
     resize: none;
 }
+
 #shoppingListText {
     text-shadow: orange 2px 2px;
     color: white;
@@ -133,11 +143,15 @@ justify-content: space-evenly;
     margin: 2%;
     border: outset .5rem orange;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
 }
 
 #shoppingList {
-    resize: none;
-    box-shadow: black 3px 3px 3px 3px;
+resize: none;
+box-shadow: black 3px 3px 3px 3px;
+font-family: Helvetica, sans-serif, serif;
+font-weight: 800;
+padding: 1% 3%;
 }
 #saveList{
     box-shadow:inset 0px 1px 0px 0px;
@@ -176,9 +190,10 @@ resize: none;
     text-align: center;
     backdrop-filter: invert(1.2);
     border-radius: 25%;
-    margin: 2%;
+    margin: 2% 14% 0% 10%;
     border: outset .5rem orange;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
 }
 
 #saveFish {
@@ -199,7 +214,7 @@ resize: none;
 }
 
 #Equipment {
-    margin: 10% 70% 5% 10%;
+    margin: 7.5% 70% 5% 10%;
     box-shadow: black 3px 3px 3px 3px;
     resize: none;
 }
@@ -212,9 +227,10 @@ resize: none;
     text-align: center;
     backdrop-filter: invert(1.2);
     border-radius: 25%;
-    margin: 2%;
+    margin: 2% 20% 1% 10%;
     border: outset .5rem orange;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
 }
 
 #saveEquipment {
@@ -237,7 +253,7 @@ resize: none;
 }
 
 #Purchases {
-    margin: 10% 0%;
+    margin: 2% 0%;
     display: flex;
     align-content: center;
     align-items: flex-end;
@@ -253,9 +269,10 @@ resize: none;
     text-align: center;
     backdrop-filter: invert(1.2);
     border-radius: 25%;
-    margin: 2%;
+    margin: 2% 2% 0% 2%;
     border: outset .5rem orange;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
 }
 
 #savePurchases {
@@ -288,9 +305,10 @@ resize: none;
     text-align: center;
     backdrop-filter: invert(1.2);
     border-radius: 25%;
-    margin: 2%;
+    margin: 5% 25% 0% 7%;
     border: outset .5rem orange;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
 }
 
 #saveChanges {
@@ -325,9 +343,10 @@ resize: none;
     text-align: center;
     backdrop-filter: invert(1.2);
     border-radius: 25%;
-    margin: 2%;
+    margin: 5% 23% 0% 10%;
     border: outset .5rem orange;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
 }
 
 #saveCoral {
@@ -363,6 +382,7 @@ resize: none;
     text-shadow: orange 2px 2px;
     font-size: 25px;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
 }
 
 #picturesText {
@@ -377,6 +397,7 @@ resize: none;
     font-weight: bold;
     border-radius: 25%;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
 }
 
 #UploadPicture {
@@ -391,6 +412,7 @@ resize: none;
     justify-content: space-between;
     border-radius: 25%;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
 }
 ul{
     list-style-type: none;
@@ -424,6 +446,7 @@ li a:hover{
     border: outset .2rem orange;
     border-radius:50px;
     margin: 5% 0% 0% 0%;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
 }
 
 #aboutHeader {
@@ -438,6 +461,7 @@ li a:hover{
     font-weight: bold;
     border-radius: 25%;
     font-family: Helvetica, sans-serif, serif;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
 }
 
 #logIn {
@@ -451,6 +475,7 @@ li a:hover{
     font-weight: bolder;
     border-radius: 25%;
     text-shadow: orange 3px 3px;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
 }
 
 #loginText {

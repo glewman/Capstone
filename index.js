@@ -19,18 +19,6 @@ router.hooks({
     done();
   },
 });
-// router.hooks({
-//   before: (done, params) => {
-//     // Because not all routes pass params we have to guard against is being undefined
-//     const page =
-//       params && Object.prototype.hasOwnProperty.call(params, "page")
-//         ? capitalize(params.page)
-//         : "Logs";
-//     console.log(state[page]);
-//     fetchDataByView(state[page]);
-//     done();
-//   },
-// });
 
 router
   .on({
@@ -102,7 +90,7 @@ function addPicOnFormSubmit(st) {
     document.querySelector("#saveTodo").addEventListener("click", (event) => {
       event.preventDefault();
       const list = document.querySelector("#toDo");
-      console.log(list.value);
+      console.log("list output", list.value);
       const requestData = {
         task: list.value,
         date: Date.now(),
@@ -139,7 +127,7 @@ function fetchDataByView(st = state.Home) {
       axios
         .get(`http://localhost:4040/toDo`)
         .then((response) => {
-          console.log(response.data);
+          console.log("to do output", response.data);
           state[st.view].toDo = response.data.pop();
           render(st);
         })
@@ -149,78 +137,3 @@ function fetchDataByView(st = state.Home) {
       break;
   }
 }
-//logs page
-// if (st.view === "Home") {
-//   document.querySelector("#saveList").addEventListener("click", (event) => {
-//     event.preventDefault();
-//     const list = document.querySelector("#shoppingList");
-//     console.log(list.value);
-//     const requestData = {
-//       item: list.value,
-//       date: Date.now(),
-//       priority: "medium",
-//       store: "store",
-//     };
-//     axios
-//       .post(`http://localhost:4040/shoppingList`, requestData)
-//       .then((response) => {
-//         state.Home.shoppingList = response.data.map(
-//           (document) => document.item
-//         );
-//         router.navigate("/Home");
-//       })
-//       .catch((error) => {
-//         console.log("It puked", error);
-//       });
-//   });
-
-//   document.querySelector("#saveTodo").addEventListener("click", (event) => {
-//     event.preventDefault();
-//     const list = document.querySelector("#toDo");
-//     console.log(list.value);
-//     const requestData = {
-//       task: list.value,
-//       date: Date.now(),
-//       priority: "medium",
-//       completed: "No",
-//     };
-//     axios
-//       .post(`http://localhost:4040/toDo`, requestData)
-//       .then((response) => {
-//         state.Home.toDo = response.data.map((document) => document.item);
-//         router.navigate("/Home");
-//       })
-//       .catch((error) => {
-//         console.log("It puked", error);
-//       });
-//   });
-// }
-// }
-// function fetchDataByView(st = state.Home) {
-// console.log(st.view);
-// switch (st.view) {
-//   case "Home":
-//     axios
-//       .get(`http://localhost:4040/shoppingList`)
-//       .then((response) => {
-//         console.log(response.data);
-//         state[st.view].shoppingList = response.data.pop();
-//         render(st);
-//       })
-//       .catch((error) => {
-//         console.log("It puked", error);
-//       });
-
-//     axios
-//       .get(`http://localhost:4040/toDo`)
-//       .then((response) => {
-//         console.log(response.data);
-//         state[st.view].toDo = response.data.pop();
-//         render(st);
-//       })
-//       .catch((error) => {
-//         console.log("It puked", error);
-//       });
-//     break;
-// }
-// }
