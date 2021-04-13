@@ -6,6 +6,9 @@ const shoppingList = require("./routers/shoppingList");
 const toDo = require("./routers/toDo");
 const fish = require("./routers/fish");
 const equipment = require("./routers/equipment");
+const plants = require("./routers/plants");
+const changes = require("./routers/changes");
+const purchases = require("./routers/purchases");
 const app = express();
 
 // Middleware
@@ -37,6 +40,9 @@ app.use("/shoppingList", shoppingList);
 app.use("/toDo", toDo);
 app.use("/fish", fish);
 app.use("/equipment", equipment);
+app.use("/plants", plants);
+app.use("/changes", changes);
+app.use("/purchases", purchases);
 
 // Database stutff
 mongoose.connect("mongodb://localhost/Tankmate");
