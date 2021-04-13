@@ -9,7 +9,7 @@ export default (st) => html` <p id="logsText">
     <div>
       <div id="fishHeader"><p>Fish Log</p></div>
       <textarea name="Fish" id="Fish" cols="50" rows="20" placeholder="Fish">
-      ${st.fish.item}
+      ${st.fish.type}
     </textarea>
       <button id="saveFish">Update Fish</button>
     </div>
@@ -22,7 +22,7 @@ export default (st) => html` <p id="logsText">
         rows="20"
         placeholder="Equipment"
       >
-      ${st.equipment.item}
+      ${st.equipment.type}
     </textarea>
       <button id="saveEquipment">Update Equipment</button>
     </div>

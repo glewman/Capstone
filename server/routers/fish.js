@@ -5,28 +5,28 @@ const router = express.Router();
 //Fish Log-------
 
 router.post("/", (request, response) => {
-  const newFish = new fish(request.body);
+  const newFish = new fish.model(request.body);
   newFish.save((err, data) => {
     return err ? response.sendStatus(500).json(err) : response.json(data);
   });
 });
 
 router.get("/", (request, response) => {
-  fish.find({}, (error, data) => {
+  fish.model.find({}, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });
 });
 
 router.delete("/:id", (request, response) => {
-  fish.findByIdAndRemove(request.params.id, {}, (error, data) => {
+  fish.model.findByIdAndRemove(request.params.id, {}, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(null);
   });
 });
 
 router.get("/:id", (request, response) => {
-  fish.findById(request.params.id, (error, data) => {
+  fish.model.findById(request.params.id, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });
@@ -34,7 +34,7 @@ router.get("/:id", (request, response) => {
 
 router.put("/:id", (request, response) => {
   const body = request.body;
-  fish.findByIdAndUpdate(
+  fish.model.findByIdAndUpdate(
     request.params.id,
     {
       $set: {

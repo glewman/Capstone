@@ -5,28 +5,28 @@ const router = express.Router();
 //Equipment----
 
 router.post("/", (request, response) => {
-  const newEquipment = new equipment(request.body);
+  const newEquipment = new equipment.model(request.body);
   newEquipment.save((err, data) => {
     return err ? response.sendStatus(500).json(err) : response.json(data);
   });
 });
 
 router.get("/", (request, response) => {
-  equipment.find({}, (error, data) => {
+  equipment.model.find({}, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });
 });
 
 router.delete("/:id", (request, response) => {
-  equipment.findByIdAndRemove(request.params.id, {}, (error, data) => {
+  equipment.model.findByIdAndRemove(request.params.id, {}, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(null);
   });
 });
 
 router.get("/:id", (request, response) => {
-  equipment.findById(request.params.id, (error, data) => {
+  equipment.model.findById(request.params.id, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });
@@ -34,7 +34,7 @@ router.get("/:id", (request, response) => {
 
 router.put("/:id", (request, response) => {
   const body = request.body;
-  equipment.findByIdAndUpdate(
+  equipment.model.findByIdAndUpdate(
     request.params.id,
     {
       $set: {

@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const users = require("./routers/users");
 const shoppingList = require("./routers/shoppingList");
 const toDo = require("./routers/toDo");
+const fish = require("./routers/fish");
+const equipment = require("./routers/equipment");
 const app = express();
 
 // Middleware
@@ -33,6 +35,8 @@ app.use(cors);
 app.use("/users", users);
 app.use("/shoppingList", shoppingList);
 app.use("/toDo", toDo);
+app.use("/fish", fish);
+app.use("/equipment", equipment);
 
 // Database stutff
 mongoose.connect("mongodb://localhost/Tankmate");

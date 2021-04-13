@@ -1,369 +1,366 @@
-*{
-    margin:0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 #Hidden {
-display: none;
+  display: none;
 }
 
 html {
-    background: url(https://live.staticflickr.com/7193/13705311063_57ff505d94_b.jpg);
-    background-size: cover;
+  background: url(https://live.staticflickr.com/7193/13705311063_57ff505d94_b.jpg);
+  background-size: cover;
 }
 header {
-    padding: 10%;
-    text-align: center;
-    color: white;
-    border: outset .6rem orange;
-    backdrop-filter: invert(1.2);
-    text-shadow: orange 4px 4px;
-    font-size: xx-large;
-    margin: 5%;
-    border-radius: 25%;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+  padding: 10%;
+  text-align: center;
+  color: white;
+  border: outset 0.6rem orange;
+  backdrop-filter: invert(1.2);
+  text-shadow: orange 4px 4px;
+  font-size: xx-large;
+  margin: 5%;
+  border-radius: 25%;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
 }
 
 footer {
-    color: white;
-    text-align: center;
-    font-family: Helvetica, sans-serif, serif;
+  color: white;
+  text-align: center;
+  font-family: Helvetica, sans-serif, serif;
 }
 
 h3 {
-    color: white;
-    margin: 2% 30%;
-    padding: 25px 50px;
-    border: inset .5rem orange;
-    backdrop-filter: invert(5.5);
-    text-align: center;
-    border-radius: 25%;
-    text-shadow: orange 2px 2px;
-    font-size: 25px;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+  color: white;
+  margin: 2% 30%;
+  padding: 25px 50px;
+  border: inset 0.5rem orange;
+  backdrop-filter: invert(5.5);
+  text-align: center;
+  border-radius: 25%;
+  text-shadow: orange 2px 2px;
+  font-size: 25px;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
 }
 
 .logs {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 #logsText {
-    font-size: 25px;
-    text-shadow: orange 2px 2px;
-    color: white;
-    text-align: center;
-    margin: 20px;
-    padding: 2%;
-    border: inset .5rem orange;
-    backdrop-filter: invert(1.2);
-    font-weight: bold;
-    border-radius: 25%;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+  font-size: 25px;
+  text-shadow: orange 2px 2px;
+  color: white;
+  text-align: center;
+  margin: 20px;
+  padding: 2%;
+  border: inset 0.5rem orange;
+  backdrop-filter: invert(1.2);
+  font-weight: bold;
+  border-radius: 25%;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
 }
 #homeIntro {
-    color: white;
-    text-align: center;
-    border: outset .5rem orange;
-    font-size: 25px;
-    backdrop-filter: invert(1.2);
-    margin: 2% 5%;
-    padding: 3%;
-    border-radius: 25%;
-    text-shadow: 2px 2px orange;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+  color: white;
+  text-align: center;
+  border: outset 0.5rem orange;
+  font-size: 25px;
+  backdrop-filter: invert(1.2);
+  margin: 2% 5%;
+  padding: 3%;
+  border-radius: 25%;
+  text-shadow: 2px 2px orange;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
 }
 
 #toDoList {
-    text-shadow: orange 2px 2px;
-    color: white;
-    font-size: x-large;
-    font-weight: bolder;
-    text-align: center;
-    backdrop-filter: invert(1.2);
-    border-radius: 25%;
-    margin: 2%;
-    border: outset .5rem orange;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+  text-shadow: orange 2px 2px;
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+  backdrop-filter: invert(1.2);
+  border-radius: 25%;
+  margin: 2%;
+  border: outset 0.5rem orange;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
 }
 
 .toDo {
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    margin: 10% 20% 2% 20%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  margin: 10% 20% 2% 20%;
 }
 
-#toDo{
-box-shadow: black 3px 3px 3px 3px;
-resize: none;
-font-family: Helvetica, sans-serif, serif;
-font-weight: 800;
-padding: 1% 3%;
+#toDo {
+  box-shadow: black 3px 3px 3px 3px;
+  resize: none;
+  font-family: Helvetica, sans-serif, serif;
+  font-weight: 800;
+  padding: 1% 3%;
 }
 #saveTodo {
-    box-shadow:inset 0px 1px 0px 0px;
-	background-color: orange;
-	border-radius:6px;
-	border:1px solid white;
-	display:inline-block;
-	cursor:pointer;
-	color:white;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 10px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffee66;
-    margin: 5% 70% 20% 2%;
+  box-shadow: inset 0px 1px 0px 0px;
+  background-color: orange;
+  border-radius: 6px;
+  border: 1px solid white;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffee66;
+  margin: 5% 70% 20% 2%;
 }
 
 .shoppingList {
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    margin: 1% 20%;
-    resize: none;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  margin: 1% 20%;
+  resize: none;
 }
 
 #shoppingListText {
-    text-shadow: orange 2px 2px;
-    color: white;
-    font-size: x-large;
-    font-weight: bolder;
-    text-align: center;
-    backdrop-filter: invert(1.2);
-    border-radius: 25%;
-    margin: 2%;
-    border: outset .5rem orange;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+  text-shadow: orange 2px 2px;
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+  backdrop-filter: invert(1.2);
+  border-radius: 25%;
+  margin: 2%;
+  border: outset 0.5rem orange;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
 }
 
 #shoppingList {
-resize: none;
-box-shadow: black 3px 3px 3px 3px;
-font-family: Helvetica, sans-serif, serif;
-font-weight: 800;
-padding: 1% 3%;
+  resize: none;
+  box-shadow: black 3px 3px 3px 3px;
+  font-family: Helvetica, sans-serif, serif;
+  font-weight: 800;
+  padding: 1% 3%;
 }
-#saveList{
-    box-shadow:inset 0px 1px 0px 0px;
-	background-color: orange;
-	border-radius:6px;
-	border:1px solid white;
-	display:inline-block;
-	cursor:pointer;
-	color:white;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 10px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffee66;
-    margin: 5% 70% 20% 2%;
+#saveList {
+  box-shadow: inset 0px 1px 0px 0px;
+  background-color: orange;
+  border-radius: 6px;
+  border: 1px solid white;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffee66;
+  margin: 5% 70% 20% 2%;
 }
 .logs {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 #Fish {
-margin: 10% 0% 5% 9%;
-flex-flow: column;
-box-shadow: black 3px 3px 3px 3px;
-resize: none;
+  margin: 10% 0% 5% 9%;
+  flex-flow: column;
+  box-shadow: black 3px 3px 3px 3px;
+  resize: none;
 }
 
 #fishHeader {
-    text-shadow: orange 2px 2px;
-    color: white;
-    font-size: x-large;
-    font-weight: bolder;
-    text-align: center;
-    backdrop-filter: invert(1.2);
-    border-radius: 25%;
-    margin: 2% 14% 0% 10%;
-    border: outset .5rem orange;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+  text-shadow: orange 2px 2px;
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+  backdrop-filter: invert(1.2);
+  border-radius: 25%;
+  margin: 2% 14% 0% 10%;
+  border: outset 0.5rem orange;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
 }
 
 #saveFish {
-    box-shadow:inset 0px 1px 0px 0px;
-	background-color: orange;
-	border-radius:6px;
-	border:1px solid white;
-	display:inline-block;
-	cursor:pointer;
-	color:white;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 10px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffee66;
-    margin: 1% 1% 1% 10%;
+  box-shadow: inset 0px 1px 0px 0px;
+  background-color: orange;
+  border-radius: 6px;
+  border: 1px solid white;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffee66;
+  margin: 1% 1% 1% 10%;
 }
 
 #Equipment {
-    margin: 7.5% 70% 5% 10%;
-    box-shadow: black 3px 3px 3px 3px;
-    resize: none;
+  margin: 7.5% 70% 5% 10%;
+  box-shadow: black 3px 3px 3px 3px;
+  resize: none;
 }
 
 #equipmentHeader {
-    text-shadow: orange 2px 2px;
-    color: white;
-    font-size: x-large;
-    font-weight: bolder;
-    text-align: center;
-    backdrop-filter: invert(1.2);
-    border-radius: 25%;
-    margin: 2% 20% 1% 10%;
-    border: outset .5rem orange;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+  text-shadow: orange 2px 2px;
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+  backdrop-filter: invert(1.2);
+  border-radius: 25%;
+  margin: 2% 20% 1% 10%;
+  border: outset 0.5rem orange;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
 }
 
 #saveEquipment {
-    box-shadow:inset 0px 1px 0px 0px;
-	background-color: orange;
-	border-radius:6px;
-	border:1px solid white;
-	display:inline-block;
-	cursor:pointer;
-	color:white;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 10px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffee66;
-    margin: 1% 1% 1% 11%;
-
-
+  box-shadow: inset 0px 1px 0px 0px;
+  background-color: orange;
+  border-radius: 6px;
+  border: 1px solid white;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffee66;
+  margin: 1% 1% 1% 11%;
 }
 
 #Purchases {
-    margin: 2% 0%;
-    display: flex;
-    align-content: center;
-    align-items: flex-end;
-    box-shadow: black 3px 3px 3px 3px;
-    resize: none;
+  margin: 2% 0%;
+  display: flex;
+  align-content: center;
+  align-items: flex-end;
+  box-shadow: black 3px 3px 3px 3px;
+  resize: none;
 }
 
 #purchasesHeader {
-    text-shadow: orange 2px 2px;
-    color: white;
-    font-size: x-large;
-    font-weight: bolder;
-    text-align: center;
-    backdrop-filter: invert(1.2);
-    border-radius: 25%;
-    margin: 2% 2% 0% 2%;
-    border: outset .5rem orange;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
+  text-shadow: orange 2px 2px;
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+  backdrop-filter: invert(1.2);
+  border-radius: 25%;
+  margin: 2% 2% 0% 2%;
+  border: outset 0.5rem orange;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
 }
 
 #savePurchases {
-    box-shadow:inset 0px 1px 0px 0px;
-	background-color: orange;
-	border-radius:6px;
-	border:1px solid white;
-	display:inline-block;
-	cursor:pointer;
-	color:white;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 10px;
-	text-decoration:none;
-    margin: 1%;
+  box-shadow: inset 0px 1px 0px 0px;
+  background-color: orange;
+  border-radius: 6px;
+  border: 1px solid white;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 10px;
+  text-decoration: none;
+  margin: 1%;
 }
 
 #Changes {
-    margin:5% 9% 5% 5%;
-    box-shadow: black 3px 3px 3px 3px;
-    resize: none;
+  margin: 5% 9% 5% 5%;
+  box-shadow: black 3px 3px 3px 3px;
+  resize: none;
 }
 
 #changesHeader {
-    text-shadow: orange 2px 2px;
-    color: white;
-    font-size: x-large;
-    font-weight: bolder;
-    text-align: center;
-    backdrop-filter: invert(1.2);
-    border-radius: 25%;
-    margin: 5% 25% 0% 7%;
-    border: outset .5rem orange;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
+  text-shadow: orange 2px 2px;
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+  backdrop-filter: invert(1.2);
+  border-radius: 25%;
+  margin: 5% 25% 0% 7%;
+  border: outset 0.5rem orange;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
 }
 
 #saveChanges {
-    box-shadow:inset 0px 1px 0px 0px;
-	background-color: orange;
-	border-radius:6px;
-	border:1px solid white;
-	display:inline-block;
-	cursor:pointer;
-	color:white;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 10px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffee66;
-    margin: 1% 1% 1% 7%;
-
+  box-shadow: inset 0px 1px 0px 0px;
+  background-color: orange;
+  border-radius: 6px;
+  border: 1px solid white;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffee66;
+  margin: 1% 1% 1% 7%;
 }
 
 #Plants {
-    margin: 5% 10% 5% 9%;
-    box-shadow: black 3px 3px 3px 3px;
-    resize: none;
+  margin: 5% 10% 5% 9%;
+  box-shadow: black 3px 3px 3px 3px;
+  resize: none;
 }
 
 #plantsHeader {
-    text-shadow: orange 2px 2px;
-    color: white;
-    font-size: x-large;
-    font-weight: bolder;
-    text-align: center;
-    backdrop-filter: invert(1.2);
-    border-radius: 25%;
-    margin: 5% 23% 0% 10%;
-    border: outset .5rem orange;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
+  text-shadow: orange 2px 2px;
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+  backdrop-filter: invert(1.2);
+  border-radius: 25%;
+  margin: 5% 23% 0% 10%;
+  border: outset 0.5rem orange;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
 }
 
 #saveCoral {
-    box-shadow:inset 0px 1px 0px 0px;
-	background-color: orange;
-	border-radius:6px;
-	border:1px solid white;
-	display:inline-block;
-	cursor:pointer;
-	color:white;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 10px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffee66;
-    margin: 1% 1% 1% 10%;
+  box-shadow: inset 0px 1px 0px 0px;
+  background-color: orange;
+  border-radius: 6px;
+  border: 1px solid white;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffee66;
+  margin: 1% 1% 1% 10%;
 }
 /* @media (max-width: 450px) {
     .logs{
@@ -372,149 +369,149 @@ resize: none;
 } */
 
 #chartsText {
-    color: white;
-    margin: 2% 30%;
-    padding: 25px 50px;
-    border: inset .5rem orange;
-    backdrop-filter: invert(1.2);
-    text-align: center;
-    border-radius: 25%;
-    text-shadow: orange 2px 2px;
-    font-size: 25px;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+  color: white;
+  margin: 2% 30%;
+  padding: 25px 50px;
+  border: inset 0.5rem orange;
+  backdrop-filter: invert(1.2);
+  text-align: center;
+  border-radius: 25%;
+  text-shadow: orange 2px 2px;
+  font-size: 25px;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
 }
 
 #picturesText {
-    font-size: 25px;
-    text-shadow: orange 2px 2px;
-    color: white;
-    text-align: center;
-    margin: 20px;
-    padding: 2%;
-    border: inset .5rem orange;
-    backdrop-filter: invert(1.2);
-    font-weight: bold;
-    border-radius: 25%;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+  font-size: 25px;
+  text-shadow: orange 2px 2px;
+  color: white;
+  text-align: center;
+  margin: 20px;
+  padding: 2%;
+  border: inset 0.5rem orange;
+  backdrop-filter: invert(1.2);
+  font-weight: bold;
+  border-radius: 25%;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
 }
 
 #UploadPicture {
-    position: relative;
-    backdrop-filter: invert(1.2);
-    margin: 16% 28%;
-    padding: 10%;
-    border: outset .5rem orange;
-    text-align: center;
-    color: white;
-    font-weight: bolder;
-    justify-content: space-between;
-    border-radius: 25%;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+  position: relative;
+  backdrop-filter: invert(1.2);
+  margin: 16% 28%;
+  padding: 10%;
+  border: outset 0.5rem orange;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  justify-content: space-between;
+  border-radius: 25%;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
 }
-ul{
-    list-style-type: none;
-    margin:0;
-    padding: 0;
-    overflow: hidden;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 li {
-    float: left;
-    display: inline;
-    padding: 0px 60px;
+  float: left;
+  display: inline;
+  padding: 0px 62px;
+  margin: 0% 0% 1% 0%;
 }
 
 li a {
-    display: block;
-    color:white;
-    text-align: center;
-    padding: 3px 5px;
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: bolder;
-    margin: 30% 0% 0% 0%;
-    text-shadow: 3px 3px orange;
-    font-family: Helvetica, sans-serif, serif;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 3px 5px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bolder;
+  margin: 30% 0% 0% 0%;
+  text-shadow: 3px 3px orange;
+  font-family: Helvetica, sans-serif, serif;
 }
 
-
-li a:hover{
-    backdrop-filter: invert(1.2);
-    color:white;
-    border: outset .2rem orange;
-    border-radius:50px;
-    margin: 5% 0% 0% 0%;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+li a:hover {
+  backdrop-filter: invert(1.2);
+  color: white;
+  border: outset 0.2rem orange;
+  border-radius: 50px;
+  margin: 5% 0% 0% 0%;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
 }
 
 #aboutHeader {
-    font-size: 25px;
-    text-shadow: orange 2px 2px;
-    color: white;
-    text-align: center;
-    margin: 20px;
-    padding: 2%;
-    border: inset .5rem orange;
-    backdrop-filter: invert(1.2);
-    font-weight: bold;
-    border-radius: 25%;
-    font-family: Helvetica, sans-serif, serif;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+  font-size: 25px;
+  text-shadow: orange 2px 2px;
+  color: white;
+  text-align: center;
+  margin: 20px;
+  padding: 2%;
+  border: inset 0.5rem orange;
+  backdrop-filter: invert(1.2);
+  font-weight: bold;
+  border-radius: 25%;
+  font-family: Helvetica, sans-serif, serif;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
 }
 
 #logIn {
-    position: relative;
-    backdrop-filter: invert(1.2);
-    margin: 16% 28%;
-    padding: 50px;
-    border: outset .5rem orange;
-    text-align: center;
-    color: white;
-    font-weight: bolder;
-    border-radius: 25%;
-    text-shadow: orange 3px 3px;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+  position: relative;
+  backdrop-filter: invert(1.2);
+  margin: 16% 28%;
+  padding: 50px;
+  border: outset 0.5rem orange;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  border-radius: 25%;
+  text-shadow: orange 3px 3px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.65);
 }
 
 #loginText {
-    font-size: 40px;
-    color: whitesmoke;
-    margin: 5px 20px 30px 20px;
-    justify-content: center;
-    background-color: orange;
-    border: inset white;
-    font-family: Helvetica, sans-serif, serif;
+  font-size: 40px;
+  color: whitesmoke;
+  margin: 5px 20px 30px 20px;
+  justify-content: center;
+  background-color: orange;
+  border: inset white;
+  font-family: Helvetica, sans-serif, serif;
 }
 
 #password {
-    margin: 1% 1% 1% 3%;
-    border: inset white;
+  margin: 1% 1% 1% 3%;
+  border: inset white;
 }
 #username {
-    border: inset white;
+  border: inset white;
 }
 #email {
-    margin: 0% 0% 0% 7.75%;
-    border: inset white;
+  margin: 0% 0% 0% 7.75%;
+  border: inset white;
 }
 #gallery img {
-    max-width: 30%;
-    height: auto;
-    margin: 1%;
+  max-width: 30%;
+  height: auto;
+  margin: 1%;
 }
 #url {
-    margin: 1%;
-    border: inset white;
+  margin: 1%;
+  border: inset white;
 }
 #title {
-    margin: 1%;
-    border: inset white;
+  margin: 1%;
+  border: inset white;
 }
 #uploadText {
-    background-color:orange;
-    font-size: 30px;
-    margin: -20% 2% 10% 2%;
-    border:  inset skyblue .35rem;
+  background-color: orange;
+  font-size: 30px;
+  margin: -20% 2% 10% 2%;
+  border: inset skyblue 0.35rem;
 }

@@ -108,6 +108,55 @@ function addPicOnFormSubmit(st) {
         });
     });
   }
+
+  if (st.view === "Logs") {
+    document.querySelector("#saveFish").addEventListener("click", (event) => {
+      event.preventDefault();
+      const list = document.querySelector("#Fish");
+      console.log(list.value);
+      const requestData = {
+        type: list.value,
+        date: Date.now(),
+        diet: "any",
+        store: "store",
+        aggression: "any",
+      };
+      axios
+        .post(`http://localhost:4040/fish`, requestData)
+        .then((response) => {
+          state.Logs.fish = response.data.map((document) => document.item);
+          router.navigate("/");
+        })
+        .catch((error) => {
+          console.log("It puked", error);
+        });
+    });
+
+    document
+      .querySelector("#saveEquipment")
+      .addEventListener("click", (event) => {
+        event.preventDefault();
+        const list = document.querySelector("#Equipment");
+        console.log("list output", list.value);
+        const requestData = {
+          type: list.value,
+          date: Date.now(),
+          price: "any",
+          store: "store",
+        };
+        axios
+          .post(`http://localhost:4040/equipment`, requestData)
+          .then((response) => {
+            state.Logs.equipment = response.data.map(
+              (document) => document.item
+            );
+            router.navigate("/");
+          })
+          .catch((error) => {
+            console.log("It puked", error);
+          });
+      });
+  }
 }
 function fetchDataByView(st = state.Home) {
   console.log(st.view);
@@ -129,6 +178,28 @@ function fetchDataByView(st = state.Home) {
         .then((response) => {
           console.log("to do output", response.data);
           state[st.view].toDo = response.data.pop();
+          render(st);
+        })
+        .catch((error) => {
+          console.log("It puked", error);
+        });
+      break;
+    case "Logs":
+      axios
+        .get(`http://localhost:4040/fish`)
+        .then((response) => {
+          console.log(response.data);
+          state[st.view].fish = response.data.pop();
+          render(st);
+        })
+        .catch((error) => {
+          console.log("It puked", error);
+        });
+
+      axios
+        .get(`http://localhost:4040/equipment`)
+        .then((response) => {
+          state[st.view].equipment = response.data.pop();
           render(st);
         })
         .catch((error) => {
