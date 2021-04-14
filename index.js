@@ -156,6 +156,72 @@ function addPicOnFormSubmit(st) {
             console.log("It puked", error);
           });
       });
+    document
+      .querySelector("#saveChanges")
+      .addEventListener("click", (event) => {
+        event.preventDefault();
+        const list = document.querySelector("#Changes");
+        console.log("list output", list.value);
+        const requestData = {
+          task: list.value,
+          date: Date.now(),
+          effect: "any",
+        };
+        axios
+          .post(`http://localhost:4040/changes`, requestData)
+          .then((response) => {
+            state.Logs.changes = response.data.map((document) => document.item);
+            router.navigate("/");
+          })
+          .catch((error) => {
+            console.log("It puked", error);
+          });
+      });
+    document
+      .querySelector("#savePurchases")
+      .addEventListener("click", (event) => {
+        event.preventDefault();
+        const list = document.querySelector("#Purchases");
+        console.log("list output", list.value);
+        const requestData = {
+          date: Date.now(),
+          item: list.value,
+          price: "any",
+          store: "any",
+        };
+        axios
+          .post(`http://localhost:4040/purchases`, requestData)
+          .then((response) => {
+            state.Logs.purchases = response.data.map(
+              (document) => document.item
+            );
+            router.navigate("/");
+          })
+          .catch((error) => {
+            console.log("It puked", error);
+          });
+      });
+    document.querySelector("#saveCoral").addEventListener("click", (event) => {
+      event.preventDefault();
+      const list = document.querySelector("#Plants");
+      console.log("list output", list.value);
+      const requestData = {
+        date: Date.now(),
+        type: list.value,
+        price: "any",
+        store: "any",
+        lighting: "any",
+      };
+      axios
+        .post(`http://localhost:4040/plants`, requestData)
+        .then((response) => {
+          state.Logs.plants = response.data.map((document) => document.item);
+          router.navigate("/");
+        })
+        .catch((error) => {
+          console.log("It puked", error);
+        });
+    });
   }
 }
 function fetchDataByView(st = state.Home) {
@@ -200,6 +266,33 @@ function fetchDataByView(st = state.Home) {
         .get(`http://localhost:4040/equipment`)
         .then((response) => {
           state[st.view].equipment = response.data.pop();
+          render(st);
+        })
+        .catch((error) => {
+          console.log("It puked", error);
+        });
+      axios
+        .get(`http://localhost:4040/changes`)
+        .then((response) => {
+          state[st.view].changes = response.data.pop();
+          render(st);
+        })
+        .catch((error) => {
+          console.log("It puked", error);
+        });
+      axios
+        .get(`http://localhost:4040/plants`)
+        .then((response) => {
+          state[st.view].plants = response.data.pop();
+          render(st);
+        })
+        .catch((error) => {
+          console.log("It puked", error);
+        });
+      axios
+        .get(`http://localhost:4040/purchases`)
+        .then((response) => {
+          state[st.view].purchases = response.data.pop();
           render(st);
         })
         .catch((error) => {

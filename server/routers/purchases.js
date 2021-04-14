@@ -5,28 +5,28 @@ const router = express.Router();
 //purchases\/\/\/\/\/
 
 router.post("/", (request, response) => {
-  const purchases = new purchases(request.body);
-  purchases.save((err, data) => {
+  const newPurchases = new purchases.model(request.body);
+  newPurchases.save((err, data) => {
     return err ? response.sendStatus(500).json(err) : response.json(data);
   });
 });
 
 router.get("/", (request, response) => {
-  purchases.find({}, (error, data) => {
+  purchases.model.find({}, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });
 });
 
 router.delete("/:id", (request, response) => {
-  purchases.findByIdAndRemove(request.params.id, {}, (error, data) => {
+  purchases.model.findByIdAndRemove(request.params.id, {}, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(null);
   });
 });
 
 router.get("/:id", (request, response) => {
-  purchases.findById(request.params.id, (error, data) => {
+  purchases.model.findById(request.params.id, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });
@@ -34,7 +34,7 @@ router.get("/:id", (request, response) => {
 
 router.put("/:id", (request, response) => {
   const body = request.body;
-  purchases.findByIdAndUpdate(
+  purchases.model.findByIdAndUpdate(
     request.params.id,
     {
       $set: {

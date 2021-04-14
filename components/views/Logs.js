@@ -34,7 +34,10 @@ export default (st) => html` <p id="logsText">
         cols="50"
         rows="20"
         placeholder="Plants/Coral"
-      ></textarea>
+      >
+${st.plants.type}
+      </textarea
+      >
       <button id="saveCoral">Update Plants/Coral</button>
     </div>
     <div>
@@ -46,7 +49,7 @@ export default (st) => html` <p id="logsText">
         rows="20"
         placeholder="Changes"
       >
-      ${st.changes.item}
+      ${st.changes.task}
     </textarea>
       <button id="saveChanges">Update Changes</button>
     </div>

@@ -5,28 +5,28 @@ const router = express.Router();
 //plant/coral\/\/\/
 
 router.post("/", (request, response) => {
-  const newplants = new plants(request.body);
-  newplants.save((err, data) => {
+  const newPlants = new plants.model(request.body);
+  newPlants.save((err, data) => {
     return err ? response.sendStatus(500).json(err) : response.json(data);
   });
 });
 
 router.get("/", (request, response) => {
-  plants.find({}, (error, data) => {
+  plants.model.find({}, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });
 });
 
 router.delete("/:id", (request, response) => {
-  plants.findByIdAndRemove(request.params.id, {}, (error, data) => {
+  plants.model.findByIdAndRemove(request.params.id, {}, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(null);
   });
 });
 
 router.get("/:id", (request, response) => {
-  plants.findById(request.params.id, (error, data) => {
+  plants.model.findById(request.params.id, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });
@@ -34,7 +34,7 @@ router.get("/:id", (request, response) => {
 
 router.put("/:id", (request, response) => {
   const body = request.body;
-  plants.findByIdAndUpdate(
+  plants.model.findByIdAndUpdate(
     request.params.id,
     {
       $set: {
