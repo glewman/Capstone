@@ -42,6 +42,10 @@ function render(st = state.Home) {
   addPicOnFormSubmit(st);
 }
 
+// import { AddPicturesToGallery } from "./lib";
+// render();
+// render(state.Pictures);
+
 function addPicOnFormSubmit(st) {
   if (st.view === "Pictures") {
     document.querySelector("form").addEventListener("submit", (event) => {

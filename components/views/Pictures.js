@@ -32,7 +32,12 @@ export default (st) => {
           required
         />
       </div>
-      <input type="submit" name="submit" value="Submit Photo" />
+      <input
+        type="submit"
+        name="submit"
+        id="uploadPicture"
+        value="Submit Photo"
+      />
     </form>
   `;
 };
